@@ -3,6 +3,8 @@ import logging
 
 logging.basicConfig()
 logging.getLogger("faster_whisper").setLevel(logging.DEBUG)
+from loguru import logger 
+logger.info("Hello World")
 import os
 import zlib
 
