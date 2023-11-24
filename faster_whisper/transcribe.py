@@ -1,6 +1,8 @@
 import itertools
 import logging
-import os
+
+logging.basicConfig()
+logging.getLogger("faster_whisper").setLevel(logging.DEBUG)import os
 import zlib
 
 from typing import BinaryIO, Iterable, List, NamedTuple, Optional, Tuple, Union
