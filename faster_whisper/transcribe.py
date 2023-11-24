@@ -2,7 +2,8 @@ import itertools
 import logging
 
 logging.basicConfig()
-logging.getLogger("faster_whisper").setLevel(logging.DEBUG)import os
+logging.getLogger("faster_whisper").setLevel(logging.DEBUG)
+import os
 import zlib
 
 from typing import BinaryIO, Iterable, List, NamedTuple, Optional, Tuple, Union
