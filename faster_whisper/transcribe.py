@@ -436,9 +436,9 @@ class WhisperModel:
                 temperature,
                 compression_ratio,
             ) = self.generate_with_fallback(encoder_output, prompt, tokenizer, options)
-            self.logger.debug(f"AVG logprob: Threshold: {options.log_prob_threshold} -- Current: {avg_logprob}")
-            self.logger.debug(f"Compression ratio: Threshold: {options.compression_ratio_threshold} -- Current: {compression_ratio}")
-            self.logger.debug(f"No speech prob: Threshold: {options.no_speech_threshold} -- Current: {result.no_speech_prob}")
+            logger.info(f"AVG logprob: Threshold: {options.log_prob_threshold} -- Current: {avg_logprob}")
+            logger.info(f"Compression ratio: Threshold: {options.compression_ratio_threshold} -- Current: {compression_ratio}")
+            logger.info(f"No speech prob: Threshold: {options.no_speech_threshold} -- Current: {result.no_speech_prob}")
             if options.no_speech_threshold is not None:
                 # no voice activity check
                 should_skip = result.no_speech_prob > options.no_speech_threshold
